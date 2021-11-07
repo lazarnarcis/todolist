@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+#text, span {
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+}
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid black;
+    width: 25%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    outline: none;
+}
+input[type="text"]:focus {
+    background-color: rgb(221, 221, 221);
+}
+.elements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+#submit {
+    padding: 10px;
+    border: none;
+    background: rgb(0, 0, 0);
+    border: 1px solid black;
+    color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#submit:hover {
+    background: rgb(43, 43, 43);
+    cursor: pointer;
+}
+#show {
+    padding: 10px;
+    border: 1px solid black;
+    background: rgb(255, 255, 255);
+    color: black;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+#showElements {
+    text-align: center;
+}
+#show:hover {
+    background: rgb(43, 43, 43);
+    cursor: pointer;
+    color: white;
+}
+h1 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+#itemButton {
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+#elements span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#elements #itemButton {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#liElement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#itemID {
+    padding: 10px;
+    background: grey;
+    border-radius: 50%;
+    width: 25px;
+    text-align: center;
+}
+body {
+    background: rgb(211, 255, 255);
+}
+@media (max-width: 800px) {
+    input[type="text"] {
+        width: 50%;
+    }
+}
