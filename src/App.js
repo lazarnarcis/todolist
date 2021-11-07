@@ -1,16 +1,24 @@
 import React, { useState, useRef } from "react"
 import ItemToDo from "./ItemToDo"
+//import useLocalStorage from "./hooks/useLocalStorage"
 import "./style.scss"
 
+
 export default function App() {
-    const [items, setItems] = useState([])
     const [currentMap, setMap] = useState()
     const inputRef = useRef()
+    const [items, setItems] = useState([])
+
+    let initialItemID = items.length
     const addElement = () => {
         if (inputRef.current.value === "") {
-            alert("Please enter something...")
+            alert("Please enter something!!!")
         } else {
-            items.unshift(inputRef.current.value)
+            const newObj = {
+                id: initialItemID,
+                text: inputRef.current.value
+            }
+            items.push(newObj)
             setItems(items)
             console.log(items)
             inputRef.current.value = ""
@@ -18,7 +26,7 @@ export default function App() {
         }
     }
     const updateMap = () => {
-        setMap(items.map((item, key) => <ItemToDo key={key} item={item} keyi={key} removeElement={() => removeElement(key)} />))
+        setMap(items.map((item) => <ItemToDo key={item.id} item={item.text} keyi={item.id} removeElement={() => removeElement(item.id)} />))
     }
     const removeElement = (key) => {
         delete items[key]

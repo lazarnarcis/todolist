@@ -102,3 +102,7 @@ body {
         width: 50%;
     }
 }
+ul {
+    display: flex;
+    flex-direction: column-reverse;
+}
