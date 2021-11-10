@@ -3,7 +3,6 @@ import ItemToDo from "./ItemToDo"
 //import useLocalStorage from "./hooks/useLocalStorage"
 import "./style.scss"
 
-
 export default function App() {
     const [currentMap, setMap] = useState()
     const inputRef = useRef()
