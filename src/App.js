@@ -40,18 +40,22 @@ export default function App() {
         alert(`You have created ${items.length} items in total. (deleted + done)`)
     }
     return (
-        <>
-            <h1>ToDo List</h1>
-            <div className="elements">
-                <input type="text" placeholder="Name here" ref={inputRef} id="elementName" onKeyDown={handleKey} autoFocus />
-                <input type="button" value="Add Item" id="submit" onClick={addElement} />
+        <section className="bck">
+            <div className="App">
+                <div className="Apps">
+                    <h1>ToDo List</h1>
+                    <div className="elements">
+                        <input type="text" placeholder="Name here" ref={inputRef} id="elementName" onKeyDown={handleKey} autoFocus />
+                        <input type="button" value="Add Item" id="submit" onClick={addElement} />
+                    </div>
+                    <div id="showElements">
+                        <input type="button" value="Check Elements" id="show" onClick={showElements} />
+                    </div>
+                    <ul>
+                        {currentMap}
+                    </ul>
+                </div>
             </div>
-            <div id="showElements">
-                <input type="button" value="Check Elements" id="show" onClick={showElements} />
-            </div>
-            <ul>
-                {currentMap}
-            </ul>
-        </>
+        </section>
     )
 }

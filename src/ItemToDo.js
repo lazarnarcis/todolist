@@ -15,7 +15,7 @@ export default function ItemToDo({keyi, item, removeElement}) {
     return (
         <div id="liElement" className={`liElement${keyi}`}>
             <span id="itemID">{priorityID}</span>
-            <li style={{backgroundColor: display ? "lightgreen" : "red"}}>
+            <li style={{backgroundColor: display ? "#5b7a7a" : "rgb(234,113,125)"}}>
                 <div id="elements">
                     <span id={`stop${keyi}`} style={{display: "none"}}>&#9989;</span>
                     <span id="text">{item}</span>

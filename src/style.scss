@@ -2,6 +2,20 @@
     margin: 0;
     padding: 0;
 }
+body {
+    overflow: hidden;
+}
+.App {
+    position: absolute;
+    background-image: url(imgs/bck.png);
+    height: 100%; 
+    width: 100%;
+    backdrop-filter: blur(8px);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    overflow-x: auto;
+}
 li {
     padding: 10px;
     margin: 10px;
@@ -67,12 +81,18 @@ h1 {
     margin-top: 25px;
     margin-bottom: 25px;
     text-align: center;
+    color: white;
 }
 #itemButton {
     padding: 5px;
     border-radius: 10px;
     margin: 0;
     cursor: pointer;
+    border: none;
+    color: white;
+    background: rgb(76, 82, 95);
+    font-weight: bold;
+    font-size: 14.5px;
 }
 #elements span {
     margin-left: 10px;
@@ -93,9 +113,6 @@ h1 {
     border-radius: 50%;
     width: 25px;
     text-align: center;
-}
-body {
-    background: rgb(211, 255, 255);
 }
 @media (max-width: 800px) {
     input[type="text"] {
